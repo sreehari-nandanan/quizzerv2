@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QUIZZER - Learn, Practice, Succeed</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="fas fa-graduation-cap"></i> QUIZZER
+    </div>
+    <button onclick="location.href='login.html'" class="sign-in-btn">
+      Sign In <i class="fas fa-sign-in-alt"></i>
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero">
+      <h1>Welcome to <span class="highlight">QUIZZER</span></h1>
+      <p>Your personalized quiz companion from Class 1 to 10. Interactive. Instant. Intelligent.</p>
+      <button onclick="location.href='login.html'" class="cta-btn">Start Learning Now</button>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+  <h2>Why Choose QUIZZER?</h2>
+  <div class="feature-cards">
+    <div class="card">
+      <i class="fas fa-brain"></i>
+      <h3>Adaptive Learning</h3>
+      <p>Questions adjust to your level for better retention.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-stopwatch"></i>
+      <h3>Real-Time Timing</h3>
+      <p>Track how long you take per question.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-chart-line"></i>
+      <h3>Performance Reports</h3>
+      <p>Instant feedback and result analysis.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-globe"></i>
+      <h3>Anywhere Access</h3>
+      <p>Use on phone, tablet, or desktop with ease.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-user-graduate"></i>
+      <h3>Student Friendly</h3>
+      <p>Simple, distraction-free interface designed just for learners.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Fully Responsive</h3>
+      <p>Works smoothly on mobile, tablet, and desktop—no app needed!</p>
+    </div>
+  </div>
+</section>
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <h2>What Learners Say</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial">
+          <p>“QUIZZER helped me ace my science test! I love the feedback and fun design.”</p>
+          <span>— Arya, Class 7</span>
+        </div>
+        <div class="testimonial">
+          <p>“Very helpful for revision. The timer keeps me focused.”</p>
+          <span>— Karan, Class 10</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq">
+      <h2>FAQs</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">Is QUIZZER free to use?</button>
+          <div class="accordion-body">Yes! All features are completely free for students.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Do I need to sign up?</button>
+          <div class="accordion-body">Just a simple sign-in is enough to get started—no registration needed.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">Are the quizzes timed?</button>
+          <div class="accordion-body">Yes, but just for awareness. There are no penalties.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 QUIZZER | Interactive Learning Platform</p>
+  </footer>
+
+  <script>
+    // Accordion toggle
+    document.querySelectorAll(".accordion-header").forEach(btn => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        const body = btn.nextElementSibling;
+        body.style.maxHeight = body.style.maxHeight ? null : body.scrollHeight + "px";
+      });
+    });
+  </script>
+</body>
+</html>

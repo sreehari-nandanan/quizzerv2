@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QUIZZER | Interactive Learning</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Home Screen: Class Selection -->
+    <div id="home" class="screen active">
+      <div class="header">
+        <h1><i class="fas fa-graduation-cap"></i> Welcome to QUIZZER</h1>
+        <p>Select your class to begin</p>
+      </div>
+      <div id="class-options" class="option-container"></div>
+      <div class="nav-buttons">
+        <button id="class-next" class="btn-primary" disabled>
+          Continue <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Subject Selection -->
+    <div id="subject-select" class="screen">
+      <div class="header">
+        <h2><i class="fas fa-book-open"></i> Choose Subject</h2>
+        <p>For Class <span id="selected-class-display"></span></p>
+      </div>
+      <div id="subject-options" class="option-container"></div>
+      <div class="nav-buttons">
+        <button id="subject-back" class="btn-secondary">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+        <button id="subject-next" class="btn-primary" disabled>
+          Continue <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Rules Screen -->
+    <div id="rules-popup" class="screen">
+      <div class="header">
+        <h2><i class="fas fa-info-circle"></i> Quiz Rules</h2>
+        <div class="progress-steps">
+          <div class="step active"><span>1</span></div>
+          <div class="step active"><span>2</span></div>
+          <div class="step active"><span>3</span></div>
+        </div>
+      </div>
+      <div class="rules-list">
+        <div class="rule-item">
+          <i class="fas fa-question-circle"></i>
+          <p>Answer 10 random questions per quiz</p>
+        </div>
+        <div class="rule-item">
+          <i class="fas fa-star"></i>
+          <p>Each correct answer gives 10 points</p>
+        </div>
+        <div class="rule-item">
+          <i class="fas fa-clock"></i>
+          <p>Take your time - no time limit</p>
+        </div>
+        <div class="rule-item">
+          <i class="fas fa-lightbulb"></i>
+          <p>Click a card to select your answer</p>
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <button id="rules-back" class="btn-secondary">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+        <button id="start-quiz" class="btn-primary">
+          Start Quiz <i class="fas fa-play"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-container" class="screen">
+      <div class="quiz-header">
+        <div class="quiz-info">
+          <span class="quiz-subject"><i class="fas fa-book"></i> <span id="quiz-subject-name"></span></span>
+          <span class="quiz-progress"><span id="current-question">1</span>/<span id="total-questions">10</span></span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 10%"></div>
+        </div>
+      </div>
+      
+      <div class="question-container">
+        <h2 id="question">Loading question...</h2>
+        <div id="options" class="option-container"></div>
+      </div>
+      
+      <div class="nav-buttons">
+        <button id="next-btn" class="btn-primary" disabled>
+          Next Question <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-container" class="screen">
+      <div class="result-header">
+        <div class="result-icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <h2>Quiz Completed!</h2>
+        <p>You've finished the <span id="result-subject"></span> quiz</p>
+      </div>
+      
+      <div class="score-display">
+        <div class="score-circle">
+          <svg class="progress-ring" width="200" height="200">
+            <circle class="progress-ring__circle" stroke-width="10" fill="transparent" r="90" cx="100" cy="100"/>
+            <circle class="progress-ring__circle progress-ring__circle--fill" stroke-width="10" fill="transparent" r="90" cx="100" cy="100"/>
+          </svg>
+          <div class="score-text">
+            <span id="score-percent">0</span>%
+          </div>
+        </div>
+        <div id="final-score" class="score-details">
+          <p>You scored <span id="score-value">0</span> out of <span id="score-max">100</span></p>
+        </div>
+      </div>
+      
+      <div class="nav-buttons">
+        <button onclick="location.reload()" class="btn-primary">
+          <i class="fas fa-redo"></i> Play Again
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 QUIZZER | Interactive Learning Platform | By Sreehari Nandanan</p>
+    </footer>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
