@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>QUIZZER | Interactive Learning</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-  
+
   <script>
     if (sessionStorage.getItem("loggedIn") !== "true") {
       window.location.href = "login.html";
     }
   </script>
-  
 
   <div class="app-container">
     <!-- Home Screen -->
@@ -50,7 +47,6 @@
       </div>
     </div>
 
-    
     <!-- Chapter Selection -->
     <div id="chapter-select" class="screen">
       <div class="header">
@@ -104,7 +100,6 @@
           <i class="fas fa-clock clock-icon"></i>
           <span id="timer-seconds">0s</span>
         </div>
-        
         <div class="quiz-info">
           <span class="quiz-subject"><i class="fas fa-book"></i> <span id="quiz-subject-name"></span></span>
           <span class="quiz-progress"><span id="current-question">1</span>/<span id="total-questions">10</span></span>
@@ -113,12 +108,12 @@
           <div class="progress-fill" style="width: 0%"></div>
         </div>
       </div>
-      
+
       <div class="question-container">
         <h2 id="question">Loading question...</h2>
         <div id="options" class="option-container"></div>
       </div>
-      
+
       <div class="nav-buttons">
         <button id="next-btn" class="btn-primary" disabled>
           Next Question <i class="fas fa-arrow-right"></i>
@@ -135,7 +130,7 @@
         <h2>Quiz Completed!</h2>
         <p>You've finished the <span id="result-subject"></span> quiz</p>
       </div>
-      
+
       <div class="score-display">
         <div class="score-circle">
           <svg class="progress-ring" width="200" height="200">
@@ -150,11 +145,12 @@
           <p>You scored <span id="score-value">0</span> out of <span id="score-max">100</span></p>
         </div>
       </div>
-      
+
       <div class="nav-buttons">
         <button onclick="location.reload()" class="btn-primary">
           <i class="fas fa-redo"></i> Play Again
         </button>
+        <!-- Download Scorecard Button will be injected here by JS -->
       </div>
     </div>
 
@@ -162,6 +158,8 @@
       <p>© 2025 QUIZZER | Interactive Learning Platform | By Sreehari Nandanan</p>
     </footer>
   </div>
+
+  <!-- QUIZZER logic -->
   <script src="script.js" defer></script>
 </body>
 </html>
