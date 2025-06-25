@@ -1075,3 +1075,57 @@ footer {
 #chapter-select .option-card {
   border-color: var(--accent);
 }
+
+.detailed-scorecard {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 12px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.scorecard-question {
+  margin-bottom: 30px;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.question-header h4 {
+  color: var(--accent);
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.time-taken {
+  color: var(--gray);
+  font-weight: 500;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.time-taken i {
+  color: var(--accent);
+  margin-right: 5px;
+}
+
+.correct-text {
+  color: var(--success);
+  font-weight: bold;
+}
+
+.incorrect-text {
+  color: var(--danger);
+  font-weight: bold;
+}
+
+.scorecard-question hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 15px;
+}
